@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "dc161c5c-c3ed-4724-9ce7-ecbd4e14e7f9",
+		"name": "Laravel Image Resize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5428104"
+	},
+	"item": [
+		{
+			"name": "Laravel Image Resize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"description": "jpg | jpeg | png",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "width",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "quality",
+							"value": "75",
+							"description": "0 - 100 | (default: 75)",
+							"type": "text"
+						},
+						{
+							"key": "option",
+							"value": "crop",
+							"description": "auto | crop | exact | portrait | landscape | (default: auto)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/image-resize",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"image-resize"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
