@@ -41,10 +41,8 @@ class LaravelSocialFeedServiceProvider extends ServiceProvider
     protected function registerMigrations()
     {
         $this->publishes([
-            __DIR__ . '/../database/migrations/create_users_table.php' => database_path('migrations/laravel-user-management/' . date('Y_m_d_His', time()) . '_create_users_table.php'),
-            __DIR__ . '/../database/migrations/create_user_roles_table.php' => database_path('migrations/laravel-user-management/' . date('Y_m_d_His', time()) . '_create_user_roles_table.php'),
-            __DIR__ . '/../database/migrations/create_user_profiles_table.php' => database_path('migrations/laravel-user-management/' . date('Y_m_d_His', time()) . '_create_user_profiles_table.php'),
-            __DIR__ . '/../database/migrations/create_user_addresses_table.php' => database_path('migrations/laravel-user-management/' . date('Y_m_d_His', time()) . '_create_user_addresses_table.php')
+            __DIR__ . '/../database/migrations/create_social_feeds_table.php' => database_path('migrations/laravel-social-feed/' . date('Y_m_d_His', time()) . '_create_social_feeds_table.php'),
+            __DIR__ . '/../database/migrations/create_social_feed_comments_table.php' => database_path('migrations/laravel-social-feed/' . date('Y_m_d_His', time()) . '_create_social_feed_comments_table.php')
         ], 'migrations');
     }
 }
